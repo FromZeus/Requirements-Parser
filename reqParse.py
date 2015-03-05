@@ -6,7 +6,6 @@ packageVers = re.compile("[\d.]+")
 
 def parseReq(inp):
 	res = dict()
-	#with open(input, 'r') as f:
 	for line in inp:
 		if line[0] == '#':
 			continue

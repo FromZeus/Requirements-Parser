@@ -9,8 +9,8 @@ if __name__ == "__main__":
 	req_url = 'https://review.fuel-infra.org/gitweb?p=openstack/horizon.git;a=blob_plain;f=requirements.txt;hb=refs/heads/master'
 	gerritAccount = lan.loginToLaunchpad()
 
-	r = lan.getRequirementsFromUrl(req_url, gerritAccount)
-	rq1 = require.Require(reqParse.parseReq(r))
+	request = lan.getRequirementsFromUrl(req_url, gerritAccount)
+	rq1 = require.Require(reqParse.parseReq(request))
 	with open("2ndReq", 'r') as f:
 		rq2 = require.Require(reqParse.parseReq(f))
 	rq = require.Require.merge(rq1.packs, rq2.packs)

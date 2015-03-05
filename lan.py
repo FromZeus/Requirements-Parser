@@ -91,14 +91,4 @@ gerritAccount = loginToLaunchpad ()
 
 req_url = 'https://review.fuel-infra.org/gitweb?p=openstack/horizon.git;a=blob_plain;f=requirements.txt;hb=refs/heads/master'
 
-#print getRequirementsFromUrl(req_url, gerritAccount)
-
-#r = getRequirementsFromUrl(req_url, gerritAccount)
-
-#def call_it(r):
-#    res = dict()
-#    for i in r.iter_lines():
-#        print i
-#    return res
-
-#call_it(r)
+print getRequirementsFromUrl(req_url, gerritAccount)
